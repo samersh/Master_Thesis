@@ -1,0 +1,68 @@
+\documentclass [12pt]{book}
+
+\renewcommand{\baselinestretch}{1.5}
+\usepackage[utf8]{inputenc}
+\usepackage{geometry}
+\geometry{a4paper, portrait, margin=2.5cm}
+\usepackage[round]{natbib}
+\usepackage{graphicx} %package to manage images
+\graphicspath{ {./images/} }
+%\usepackage[rightcaption]{sidecap}
+\usepackage[font=scriptsize, labelfont=bf]{caption}
+\usepackage{wrapfig}
+\usepackage{hyperref}
+\usepackage[acronym, toc]{glossaries}
+\usepackage{acronym} 
+\usepackage[nottoc]{tocbibind}
+\makeglossaries
+
+
+\begin{document}
+\input{titlepage.tex}
+\pagenumbering{Roman}
+\addcontentsline{toc}{section}{Acknowledgement}
+\section*{Acknowledgement}
+bla bla bla bla
+\newpage
+\section*{Abstract}
+blablabal
+\addcontentsline{toc}{section}{Abstract}
+\tableofcontents
+\listoffigures
+\input{Bibliocosas/glossary.tex}
+
+\printglossary[type=\acronymtype, title=Abbreviations, nonumberlist]
+
+
+\chapter{Introduction}
+\pagenumbering{arabic}
+\input{chapters/Introduction.tex}
+\chapter{State of the Art }
+\input{chapters/StateoftheArt.tex}
+\chapter{Background}
+\input{chapters/Background.tex}
+\chapter{Methodology}
+\input{chapters/Methodology.tex}
+\chapter{Application Development}
+\input{chapters/Application.tex}
+\chapter{Results}
+\input{chapters/Results.tex}
+\chapter{Discussion}
+\input{chapters/Discussion.tex}
+\chapter{Limitation and Future work}
+\input{chapters/Futurework.tex}
+\chapter{Conclusion}
+\input{chapters/Conclusion.tex}
+
+
+\bibliographystyle{apalike}
+\bibliography{Ref}
+\appendix
+\chapter{Declaration of consent}
+\input{chapters/appendix.tex}
+
+\end{document}
+
+
+
+ 
