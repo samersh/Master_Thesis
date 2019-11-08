@@ -1,5 +1,61 @@
 
+
+\section{Virtual reality components}
+
+
+
+A \acrshort{vr} system is made up of two major subsystems, the hardware and software. The hardware can be further divided into \acrshort{vr} engine and I/O devices, while the software can be divided into application software and database as illustrated in Figure \ref{fig:sys}.
+The classical five components of a \acrshort{vr} system are, Software and Database, \acrshort{vr} Engine, I/O Devices, User and Task \citep{burdea2017virtual,Bamodu2013VirtualComponents}.
+
+\begin{figure}[ht]
+    \centering
+    \includegraphics[width=0.50\textwidth]{images/VR.png}
+    \caption{VR System Architecture - \citep{burdea2017virtual}}
+    \label{fig:sys}
+\end{figure}
+
+
+\subsection{Software and Database}
+Virtual reality system software is a colletion of tools and software for designing, developing and
+maintaining virtual environments and the database where the information is stored. The tools can be classified into modeling tools and development tools.
+
+VR Modeling Tools. There are many modeling tools available for VR designing, the most
+common ones are , 3ds Max, Maya and Creator. Engineering specific applications might use software like CATIA, Pro/E, Solidworks, UG, etc. VR Development Tools. VR is a complex and integrative technology that borrows from many other technologies, such as real time 3D computer graphics, tracking technology, sound processing, and haptic technology, among others, therefore software development flexibility and real time interaction is needed.
+
+
+\subsection{VR Engine}
+VR Engine. In VR systems, the VR engine or computer system has to be selected according to the
+requirement of the application. Graphic display and image generation are some of the most important factors and time consuming task in a VR system. The choice of the VE engine depends on the application field, user, I/O devices, level of immersion and the graphic output required, since it is responsible for calculating and generating graphical models, object rendering, lighting, mapping, texturing, simulation and display in real-time. The computer also handles the interaction with users and serves as an interface with the I/O devices. A major factor to consider when selecting the VR engine is the processing power of the computer, and the computer processing power is the amount of senses (graphical, sound, haptic, etc) that can be rendered in a particular time frame as pointed. The VR engine is required to recalculate the virtual environment approximately every 33ms and produce real time simulation of more than 24fps [4], furthermore, the associated graphic engine should be capable of producing stereoscopic vision. The VR engine could be a standard PC with more processing power and a powerful graphics accelerator or distributed computer systems interconnected through high speed communication network.
+
+
+\subsection{I/O Devices}
+Input Devices. The input devices are the means by which the user interacts with the virtual world. They send signals to the system about the action of the user, so as to provide appropriate reactions back to the user through the output devices in real time. They can be classified into tracking device, point input device, bio-controllers and voice device. Tracking devices sometimes referred to as position sensors, are used in tracking the position of the user [1], and they include, electromagnetic, ultrasonic, optical, mechanical and gyroscopic sensors, data gloves, neural and bio or muscular controllers [2]. Examples of point-input devices include 6DOF mouse and force or space ball. Their technology is an adaptation of the normal mouse with extended functions and capability for 3D. Voice communication is a common way of interaction among humans. So it feels natural to incorporate it into a VR system. Voice recognition or processing software can be used in accomplishing this.
+
+Output Devices. The output devices get feedback from the VR engine and pass it on to the users through the corresponding output devices to stimulate the senses. The possible classifications of output devices based on the senses are: graphics (visual), audio (aural), haptic (contact or force), smell and taste. Of these, the first 3 are frequently used in VR systems, while smell and taste are still uncommon.
+Two possible common options for the graphics are the stereo display monitor, and the HMD which provides a higher level of immersion. In the HMD, the two independent views produced are interpreted by the brain to provide a 3D view of the virtual world. Audio or sound is an important channel in VR; its importance is only surpassed by that of visual. 3D sound can be used in producing different sounds from different location to make the VR application more realistic.
+Haptic is used to allow the user feel virtual objects. This can be achieved through electronic signals or mechanical devices.
+
+
+
+\subsection{User}
+
+
+
+\subsection{Task}
+
+
+
 \section{Hardware and Development Environments}
+
+
+
+
+
+
+
+
+
+
 \subsection{Headsets}
 \textbf{Google Cardboard}: The virtual reality platform was released in
 2014 by Google. The platform is intended as a low-cost system to
