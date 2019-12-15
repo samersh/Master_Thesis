@@ -4,8 +4,7 @@
 
 
 
-A \acrshort{vr} system is made up of two major subsystems, the hardware and software. The hardware can be further divided into \acrshort{vr} engine and I/O devices, while the software can be divided into application software and database as illustrated in Figure \ref{fig:sys}.
-The classical five components of a \acrshort{vr} system are, Software and Database, \acrshort{vr} Engine, I/O Devices, User and Task \citep{burdea2017virtual,Bamodu2013VirtualComponents}.
+Two main subsystems, hardware and software, make up a \acrshort{vr} system. The hardware can also be divided into \acrshort{vr} engine and I/O devices, while the software can be split into application software and database as shown in Figure \ref{fig:sys}. A \acrshort{vr} system's classic five components are Software and Database, VR Engine, I/O Devices, User and Task \citep{burdea2017virtual,Bamodu2013VirtualComponents}.
 
 \begin{figure}[ht]
     \centering
@@ -16,38 +15,42 @@ The classical five components of a \acrshort{vr} system are, Software and Databa
 
 
 \subsection{Software and Database}
-Virtual reality system software is a colletion of tools and software for designing, developing and
-maintaining virtual environments and the database where the information is stored. The tools can be classified into modeling tools and development tools.
-
-VR Modeling Tools. There are many modeling tools available for VR designing, the most
-common ones are , 3ds Max, Maya and Creator. Engineering specific applications might use software like CATIA, Pro/E, Solidworks, UG, etc. VR Development Tools. VR is a complex and integrative technology that borrows from many other technologies, such as real time 3D computer graphics, tracking technology, sound processing, and haptic technology, among others, therefore software development flexibility and real time interaction is needed.
-
+Application for Virtual Reality Project is a set of tools and software to plan, develop and maintain virtual environments and the database where the information is stored. The tools can be classified as tools for modeling and development. There are many modeling tools available for \acrshort{vr} development, with 3D Max, Maya, and Creator being the most popular. Solidworks, Fusion 360, and CATIA are Engineering specific applications that could be used as well. \acrshort{vr} is a dynamic and integrative technology that borrows from many other innovations, such as real-time 3D computer graphics, tracking technology, motion synthesis, and haptic engineering, among others \citep{burdea2017virtual, Bamodu2013VirtualComponents}.
 
 \subsection{VR Engine}
-VR Engine. In VR systems, the VR engine or computer system has to be selected according to the
-requirement of the application. Graphic display and image generation are some of the most important factors and time consuming task in a VR system. The choice of the VE engine depends on the application field, user, I/O devices, level of immersion and the graphic output required, since it is responsible for calculating and generating graphical models, object rendering, lighting, mapping, texturing, simulation and display in real-time. The computer also handles the interaction with users and serves as an interface with the I/O devices. A major factor to consider when selecting the VR engine is the processing power of the computer, and the computer processing power is the amount of senses (graphical, sound, haptic, etc) that can be rendered in a particular time frame as pointed. The VR engine is required to recalculate the virtual environment approximately every 33ms and produce real time simulation of more than 24fps [4], furthermore, the associated graphic engine should be capable of producing stereoscopic vision. The VR engine could be a standard PC with more processing power and a powerful graphics accelerator or distributed computer systems interconnected through high speed communication network.
+ The \acrshort{vr} engine or computer system must be selected in \acrshort{vr} systems according to the application's requirement. Some of the most important factors and time-consuming activity in a \acrshort{vr} environment is graphic interface and image creation. The selection of the \acrshort{vr} engine depends on the application area, user I/O devices immersion level, and the appropriate graphical output, as it is responsible for measuring and creating visual models, rendering objects, lighting, visualization, shading, simulation and show in real-time. The computer also manages interaction with users and serves as an interface to I/O devices. The processing power of the computer is a big factor to consider when choosing the \acrshort{vr} engine, and the processing power of the computer is the number of senses (graphic, audio, etc.) that can be rendered as pointed in a specific time frame. The \acrshort{vr} engine is expected to recalculate the virtual world roughly every 33ms and generate more than 24fps of real-time simulation, and the corresponding graphic engine should also be able to produce stereoscopic vision. The \acrshort{vr} engine could be a regular PC with more processing power and an efficient processor for graphics or decentralized computer systems linked through a high-speed communication network \citep{burdea2017virtual, Bamodu2013VirtualComponents}.
 
 
 \subsection{I/O Devices}
-Input Devices. The input devices are the means by which the user interacts with the virtual world. They send signals to the system about the action of the user, so as to provide appropriate reactions back to the user through the output devices in real time. They can be classified into tracking device, point input device, bio-controllers and voice device. Tracking devices sometimes referred to as position sensors, are used in tracking the position of the user [1], and they include, electromagnetic, ultrasonic, optical, mechanical and gyroscopic sensors, data gloves, neural and bio or muscular controllers [2]. Examples of point-input devices include 6 DOF mouse and force or space ball. Their technology is an adaptation of the normal mouse with extended functions and capability for 3D. Voice communication is a common way of interaction among humans. So it feels natural to incorporate it into a VR system. Voice recognition or processing software can be used in accomplishing this.
+ The input tools are the way for communicating with the virtual world by the user. They send signals about the user's action to the system to provide the user with appropriate reactions in real-time via the output devices. They can be categorized into devices for tracking, point-input devices, bio-controllers and voice devices. Often referred to as location sensors, tracking devices are used to detect the user's position, including electromagnetic, ultrasonic, optical, mechanical and gyroscopic detectors, data goggles, neural and bio or muscle controls. Types of point-input devices provide 6 \acrfull{dof} and space or force ball. Their technology is a normal mouse adaptation with extended functionality and 3D capability. Communication of voice is a common way of human interaction. Therefore, incorporating it into a \acrshort{vr} device also feels natural. To accomplish this, voice recognition or processing software may be used \citep{burdea2017virtual, Bamodu2013VirtualComponents} .
 
-Output Devices. The output devices get feedback from the VR engine and pass it on to the users through the corresponding output devices to stimulate the senses. The possible classifications of output devices based on the senses are: graphics (visual), audio (aural), haptic (contact or force), smell and taste. Of these, the first 3 are frequently used in VR systems, while smell and taste are still uncommon.
-Two possible common options for the graphics are the stereo display monitor, and the HMD which provides a higher level of immersion. In the HMD, the two independent views produced are interpreted by the brain to provide a 3D view of the virtual world. Audio or sound is an important channel in VR; its importance is only surpassed by that of visual. 3D sound can be used in producing different sounds from different location to make the VR application more realistic.
-Haptic is used to allow the user feel virtual objects. This can be achieved through electronic signals or mechanical devices.
+ The output devices receive feedback from the \acrshort{vr} engine and pass it on to users to stimulate the senses through the appropriate output devices. The possible senses-based classifications of output devices are graphics (visual), audio (aural), haptic (contact or force), odor and taste. The first 3 of these are often used in \acrshort{vr} environments, though odor and taste are still rare.The stereo video screen and the \acrfull{hmd}, which offers a higher level of immersion, are two potential traditional graphics choices. In the \acrshort{hmd}, the brain interprets the two separate views generated to provide a 3D perspective of the virtual world. An important medium in \acrshort{vr} is audio or sound, its value is only matched by that of video. To make the VR experience more immersive, 3D audio can be used to produce different sounds from different locations \citep{burdea2017virtual, Bamodu2013VirtualComponents}.
 
 
 
 \subsection{User}
 
+The users are the main reason to keep or to improve a particular \acrshort{vr} system design depending on their responses. Some users might have motion sickness during the simulation, therefore we should know what caused it, and how to avoid it. Human behaviour can not be measured mathematically, it is a qualitative data, therefore its more difficult to analyze the human machine interaction. \acrshort{vr} has many parameters, however \acrshort{vr} human factor studies is a series of experiments aimed at deteremined users to perform with \acrshort{vr} technology, and it tests usability, user saftey, and any related social impact related to \acrshort{vr}. 
 
+\begin{figure}[ht]
+    \centering
+    \includegraphics[width=0.40\textwidth, height=250pt]{images/VRhf.png}
+    \caption{VR human factors study - \citep{burdea2017virtual}}
+    \label{fig:vrhf}
+\end{figure}
 
+A great advantage of data collection in \acrlong{vr} that it can be sampled during the testing, also the researcher can have a comprehensive view while the user is immersed in the simulation. Nevertheless, while designing the experimental protocol the researcher should avoid any drawbacks, for instance to not have a repeated subject, because it will end up with the same results because data validity comes with the subject actions. Also to avoid hardware and software problems like latency which will affect the validity and reliability of the experiment. After the data is collected and analyzed, the findings will be used to refine the user interface design, enhance the software performance or add any new features to the application \citep{burdea2017virtual}. 
+ 
 \subsection{Task}
 
+I talked about different applications and platforms that \acrshort{vr} made an impact in it in Chapter \ref{StateoftheArt}.  
 
 
 \section{Hardware and Development Environments}
 
-In this section, I will mention and define the equipment and tools that I used to develop the application. Also, I will present how I did manage to re-build part of the Al-Ghabisiyya village. These tools helped me in modeling the terrain of the geographical area as well as re-building some of the houses around the mosque of Al-Ghabisiyya. Placing the village on the right location of the map was tricky and challenging therefore, I will explain it in detail. 
+In this section, I will mention and define the equipment and tools that I used to develop the application. The software that i used to build the application. and The camera's that was used to film the cities and locations in Palestine. I used Virtual reality headsets and headphones to test the application with users.
+
+
 \subsection{Headsets}
 
 \textbf{Google Cardboard}: The virtual reality platform was released in
@@ -57,9 +60,24 @@ named for its fold-out cardboard viewer. The Google Cardboard
 headsets are built out of simple, low-cost components -
 cardboard. Google open-sourced the schematics and the
 assembly instructions freely on their site, allowing people to
-assemble Cardboard themselves from readily available parts (“Google Cardboard,” 2014). The
+assemble Cardboard themselves from readily available parts \citep{Prasuethsut2014GoogleReview}. The cardboards were the best option to be used for the project due to the easy mobility and the low price. It is easier to travel with it through airports or checkpoints since it’s cardboard.
+
+
+
+
+\textbf{Google Daydream}: The virtual reality platform was released in
+2014 by Google. The platform is intended as a low-cost system to
+encourage interest and development in VR applications. It was
+named for its fold-out cardboard viewer. The Google Cardboard
+headsets are built out of simple, low-cost components -
+cardboard. Google open-sourced the schematics and the
+assembly instructions freely on their site, allowing people to
+assemble Cardboard themselves from readily available parts \citep{Prasuethsut2014GoogleReview}. The
 cardboards were the best option to be used for the project due to the easy mobility and the
 low price. It is easier to travel with it through airports or checkpoints since it’s cardboard.
+
+
+
 \subsection{Cameras}
 \textbf{GoPro Fusion}: the footage quality can reach up to 5.2K spherical video
 resolution. The GoPro fusion can be controlled via a mobile
@@ -69,7 +87,7 @@ process the images or the footage taken from the two lenses to not
 have visible stitching or overlapping in the final image. That is a
 common problem in most of the VR cameras to have a big overlapping on the final image. The
 data is saved on two microSD cards one for each lens, the files need to be combined to have
-a final 360o video \citep{Easton2018}. The camera was used in most of the project filming material,
+a final 360$^{\circ}$ video \citep{Easton2018}. The camera was used in most of the project filming material,
 it has the best footage quality and a perfect stabilization in the videos.
 
 
@@ -78,7 +96,7 @@ handheld shooting, although it has a socket also for a tripod. A small LCD
 screen helps in navigating through the camera modes. The video resolution is
 4K, while the still images are somewhat soft. The smartphone app is easy to
 use and clear for the user also it offers a good range of viewing options. In
-general is it a small and simple camera to use (Digital Camera, 2018). The
+general is it a small and simple camera to use \citep{DigitalCamera2018}. The
 camera used as a backup camera during the project. The quality is acceptable
 for a small and very light camera.
 
@@ -107,7 +125,7 @@ expertise.
 
 \section{Development \& Implementation}
 
-
+ Also, I will present how I did manage to re-build part of the Al-Ghabisiyya village. These tools helped me in modeling the terrain of the geographical area as well as re-building most of the houses of Al-Ghabisiyya. Placing the village on the right location of the map was tricky and challenging therefore, I will explain it in detail. 
 
 \subsection{Glimpses from Palestine Application}
 
