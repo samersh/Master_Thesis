@@ -30,7 +30,7 @@ Application for Virtual Reality Project is a set of tools and software to plan, 
 
 \subsection{User}
 
-The users are the main reason to keep or to improve a particular \acrshort{vr} system design depending on their responses. Some users might have motion sickness during the simulation, therefore we should know what caused it, and how to avoid it. Human behaviour can not be measured mathematically, it is a qualitative data, therefore its more difficult to analyze the human machine interaction. \acrshort{vr} has many parameters, however \acrshort{vr} human factor studies is a series of experiments aimed at deteremined users to perform with \acrshort{vr} technology, and it tests usability, user saftey, and any related social impact related to \acrshort{vr}. 
+The users are the main reason to keep or to improve a particular \acrshort{vr} system design depending on their responses. Some users might have motion sickness during the simulation, therefore we should know what caused it, and how to avoid it. Human behavior can not be measured mathematically, it is a qualitative data, therefore its more difficult to analyze the human-machine interaction. \acrshort{vr} has many parameters, however, \acrshort{vr} human factor studies is a series of experiments aimed at determined users to perform with \acrshort{vr} technology, and it tests usability, user safety, and any related social impact related to \acrshort{vr}. 
 
 \begin{figure}[ht]
     \centering
@@ -39,12 +39,33 @@ The users are the main reason to keep or to improve a particular \acrshort{vr} s
     \label{fig:vrhf}
 \end{figure}
 
-A great advantage of data collection in \acrlong{vr} that it can be sampled during the testing, also the researcher can have a comprehensive view while the user is immersed in the simulation. Nevertheless, while designing the experimental protocol the researcher should avoid any drawbacks, for instance to not have a repeated subject, because it will end up with the same results because data validity comes with the subject actions. Also to avoid hardware and software problems like latency which will affect the validity and reliability of the experiment. After the data is collected and analyzed, the findings will be used to refine the user interface design, enhance the software performance or add any new features to the application \citep{burdea2017virtual}. 
+A great advantage of data collection in \acrlong{vr} that it can be sampled during the testing, also the researcher can have a comprehensive view while the user is immersed in the simulation. Nevertheless, while designing the experimental protocol the researcher should avoid any drawbacks, for instance, to not have a repeated subject, because it will end up with the same results because data validity comes with the subject actions. Also to avoid hardware and software problems like latency which will affect the validity and reliability of the experiment. After the data is collected and analyzed, the findings will be used to refine the user interface design, enhance the software performance or add any new features to the application \citep{burdea2017virtual}. 
  
 \subsection{Task}
 
-I talked about different applications and platforms that \acrshort{vr} made an impact in it in Chapter \ref{StateoftheArt}.  
+I talked about different applications and platforms that \acrshort{vr} made an impact on it in Chapter \ref{StateoftheArt}. There are more tasks that \acrlong{vr} can enhance their performance.
 
+For instance, Virtual reality in manufacturing. The life cycle of the manufacturing system is based on different stages, like design, personnel training, and operation, but there are multiple domains of \acrshort{vr} in manufacturing as shows in Figure \ref{fig:vrman}. 
+\begin{figure}[ht]
+    \centering
+    \includegraphics[width=0.50\textwidth]{images/VRmanu.png}
+    \caption{Domains of VR in manufacturing - \citep{burdea2017virtual}}
+    \label{fig:vrman}
+\end{figure}
+
+\textbf{Virtual prototyping}: It is an obligatory stage of the development process, where the designer can validate the design, and establish manufacturing methods. Instead of drawing on a paper Virtual reality allow the designers to receive a simulation and quick feedback for the design.
+
+
+\textbf{Assembly validation}: Another stage of prototyping, if the product contains multiple parts, in this stage the separate designed parts need to be tested and see they all fit together. \acrshort{vr} allows the user to test and assemble the parts. If there are flaws found in the design, it can be modified directly. 
+
+
+\textbf{Ergonomic analysis}: This is made after the physical prototype is done and exist. Virtual Reality gives the users control and feels the ergonomics of the prototype in real-time. The ergonomic analysis depends on body discomfort during the testing time. With different tools, the body ergonomics of the user and the comfort of the body is being tested during the simulation in \acrshort{vr}. 
+
+\textbf{Plant design}: New factories and large industries need to have a plan for the construction and the flow of tasks inside the facility. That's where Virtual reality can be used for simulating the tasks flow, and the user can control equipment. Designers can run high complexity tasks that cover safety, production, and many dynamic variables. Everything can be simulated by \acrshort{vr}, before anything goes into production.  
+
+\textbf{Training maintenance}:  Training of employees takes a lot of time and effort, also it might be dangerous. Using Virtual reality in training for the assembly line, reducing the number of errors, and the training was more efficient compared to the standard training.
+
+\textbf{Marketing}: Virtual reality also played a good role in marketing, an example for that was at many car dealerships where they had a virtual reality room, that makes the customer interact with the car within the virtual environments and adjust the car color or the seat material.
 
 \section{Hardware and Development Environments}
 
@@ -60,68 +81,31 @@ named for its fold-out cardboard viewer. The Google Cardboard
 headsets are built out of simple, low-cost components -
 cardboard. Google open-sourced the schematics and the
 assembly instructions freely on their site, allowing people to
-assemble Cardboard themselves from readily available parts \citep{Prasuethsut2014GoogleReview}. The cardboards were the best option to be used for the project due to the easy mobility and the low price. It is easier to travel with it through airports or checkpoints since it’s cardboard.
+assemble Cardboard themselves from readily available parts \citep{Prasuethsut2014GoogleReview}.
 
 
-
-
-\textbf{Google Daydream}: The virtual reality platform was released in
-2014 by Google. The platform is intended as a low-cost system to
-encourage interest and development in VR applications. It was
-named for its fold-out cardboard viewer. The Google Cardboard
-headsets are built out of simple, low-cost components -
-cardboard. Google open-sourced the schematics and the
-assembly instructions freely on their site, allowing people to
-assemble Cardboard themselves from readily available parts \citep{Prasuethsut2014GoogleReview}. The
-cardboards were the best option to be used for the project due to the easy mobility and the
-low price. It is easier to travel with it through airports or checkpoints since it’s cardboard.
-
+\textbf{Google Daydream}: Google Daydream is not made out of plastic and not cardboard. It is made out of cloth, and that makes it a light virtual reality headset. Virtual reality can be activated automatically in android devices with this headset via the \acrfull{nfc} chipset installed on the door of the headset. The smartphone does not need to be in a certain position, because Daydream will automatically align the image of the mobile to the lenses. Since it is made out of cloth, it is a very comfortable headset because of the face cushion that gives a comfortable feeling, and the thick strap that holds the whole headset around the head, like ski goggles. Nevertheless the weight, it makes the user keep playing without being tired \citep{Amadeo2016DaydreamTechnica}. 
 
 
 \subsection{Cameras}
-\textbf{GoPro Fusion}: the footage quality can reach up to 5.2K spherical video
-resolution. The GoPro fusion can be controlled via a mobile
-application through Bluetooth or Wi-Fi. The two lenses on the two
+\textbf{GoPro Fusion}: The footage quality can reach up to 5.2K spherical video resolution. The GoPro fusion can be controlled via a mobile application through Bluetooth or Wi-Fi. The two lenses on the two
 sides are not symmetrically aligned, they are off-axis. That helps to
 process the images or the footage taken from the two lenses to not
 have visible stitching or overlapping in the final image. That is a
-common problem in most of the VR cameras to have a big overlapping on the final image. The
-data is saved on two microSD cards one for each lens, the files need to be combined to have
-a final 360$^{\circ}$ video \citep{Easton2018}. The camera was used in most of the project filming material,
-it has the best footage quality and a perfect stabilization in the videos.
+common problem in most of the VR cameras to have a big overlapping on the final image. The data is saved on two microSD cards one for each lens, the files need to be combined to have
+a final 360$^{\circ}$ video \citep{Easton2018}. The camera was used in most of the project filming material, it has the best footage quality and a perfect stabilization in the videos.
 
 
-\textbf{Samsung Gear 360}: The small and rounded shape of the camera is ideal for
-handheld shooting, although it has a socket also for a tripod. A small LCD
-screen helps in navigating through the camera modes. The video resolution is
-4K, while the still images are somewhat soft. The smartphone app is easy to
-use and clear for the user also it offers a good range of viewing options. In
-general is it a small and simple camera to use \citep{DigitalCamera2018}. The
-camera used as a backup camera during the project. The quality is acceptable
-for a small and very light camera.
+\textbf{Samsung Gear 360}: The small and rounded shape of the camera is ideal for handheld shooting, although it has a socket also for a tripod. A small LCD screen helps in navigating through the camera modes. The video resolution is 4K, while the still images are somewhat soft. The smartphone app is easy to use and clear for the user also it offers a good range of viewing options. In general, is it a small and simple camera to use \citep{DigitalCamera2018}. The camera used as a backup camera during the project. The quality is acceptable for a small and very light camera.
 
 \subsection{Development Environments}
 
-The VR technology is moving forward and there is an increasing number of tools and platforms
-available for developers (“11 Tools for VR Developers,” 2017). VR technology has found its
-way into different environments like computers, smartphone, and web. This section will
-mention the two tools that were used by the VR team developers to build a mobile VR
-application and a VR experience over the web. Nevertheless, most browsers are still struggling
-with the headset device support. Most phones can be detected with the WebVR-polyfill and
-if turned sideways, it will switch the dual display mode automatically that you can use Google
-Cardboard or other headsets built for smartphones (“11 Tools for VR Developers,” 2017).
+\acrshort{vr} technology is moving forward and designers are gradually getting access to new tools and platforms \citep{Bamodu2013VirtualComponents}. Not only in computers but also smartphones and web, \acrshort{vr} technology has found its way into different environments. In this section, I will mention the software's that I used to develop and design a smartphone \acrshort{vr} application \say{Glimpses from Palestine}. 
 
 
-\textbf{Unity 3D}: Unity is one of the most famous game engines, it has a direct VR mode to preview
-the work on any Head mounted display, which can be easier and faster for designers to boost
-their productivity. Most of the Head mounted displays are supported in Unity. Unity works
-with C\# and JavaScript; it is easy to learn due to the huge online community. Unity can export
-the work to almost any platform even WebGL (“11 Tools for VR Developers,” 2017). Unity was
-the best and most powerful tool to be used during the project to develop the VR experience.
-Due to the easy implementation of the VR Environment in Unity, also the variety of platforms
-that it allows the developer to distribute the software on it. In addition, there is a huge
-community for Unity developers on the internet, where everyone can share knowledge and
-expertise.
+\textbf{Unity 3D}: Unity is one of the most famous game engines, it is a  fully integrated development engine that offers out-of-the-box capabilities for immersive 3D creations. It has a direct \acrshort{vr} mode to preview the work on any \acrlong{hmd}, which can be easier and faster for designers to boost their productivity \citep{Kim2014UsingDevelopment}. Most of the \acrlong{hmd}s are supported in Unity. Unity works with C\# and JavaScript, it is easy to learn due to the huge online community. Unity can export the work to various platforms including Mac, Web, iOS, Android, and Xbox \citep{Kim2014UsingDevelopment}. Unity's robust tool collection, interactive interface and on-the-fly testing and editing feature let developers save time and effort Unity was the best and most powerful tool to be used during the project to develop the VR experience.
+
+\textbf{Autodesk Fusion 360}: Fusion is a cloud-based 3D modeling software where all your work and files would be saved on the cloud. You can design \acrfull{cad} and \acrfull{cam} for \acrfull{cae} tasks. For my personal experience, it was easier for me to work with Fusion since it is an engineering-based software.  Fusion can animate and make videos, also render high quality images for the designs. Nevertheless, Fusion is designed for all levels of users, from beginner to modeling to experienced engineer \citep{Cline2018FusionFabrication}. 
 
 \section{Development \& Implementation}
 
@@ -129,10 +113,34 @@ expertise.
 
 \subsection{Glimpses from Palestine Application}
 
+ Having looked closely into the prior design of the \acrshort{vr} application prototype that has been developed during \acrshort{yallah!} I realized that the previous design had many unorganized files. I decided to start the development from scratch again, This will make it more versatile, efficient and quick. Therefore I started to build the 360$^{\circ}$ video environment. In Unity when you start a new scene it has the camera in the middle of the environment by default, this camera will be the user's point of view. The camera will be surrounded by a sphere. The sphere will be the display of the 360$^{\circ}$ video. Since the camera will be in the middle of the sphere and the video will be played on the sphere from outside, the camera will show nothing when you play the scene. Therefore a small C\# code made it possible to flip the player of the video inside the sphere. Then the user will have the feeling of immersion in Virtual reality. 
+\begin{figure}[ht]
+    \centering
+    \includegraphics[width=0.90\textwidth]{images/sphere.png}
+    \caption{Virtual Reality Sphere in Unity }
+    \label{fig:sphere}
+\end{figure}
+
+
+Next, I wanted to design a scene and code it absolutely where I could later use it as a template for other scenes. But before I rendered the 360 videos, it took a lot of computer power because it stitched and rendered two videos from the two lenses in the camera.I rendered the videos at night and worked on the application design during the day.
+
+I took the first video to Unity, and it was jamming all the time as I tried it. The image was frozen, then I heard no sound.On a VR video player, I tried to play the video. This performed well, and with sound. I took a step backwards and tested the configuration I used for rendering. The video was made in the form of 5.2k and the spatial sound. Unity can not handle 5.2k video seamlessly and without a third-party plug-in, it can not process spatial audio. Once I made the rendering configuration changes, I researched the video settings in Unity in the unity community forum and found that the videos had to be trans-coded in Unity, so I trans-coded the videos with VP8 codec. The videos worked smoothly after that. 
+
+Now I have a Virtual reality environment, I am inside a 360$^{\circ}$ video and I look around me as I am being there. To solve the spatial sound problem, I found an asset (plug-in) for Unity called \say{ResonanceAudio}. It will make the Audio of the video spatial, that means the audio will move where is the user looking at, some people call it \say{3D Sound}.   
+
+Users need to move around the scenes, therefore they need a selection tool or a controller. Due to the application purposes that it needs to be on a smartphone, it wouldn't be reliable to program the application for a certain kind of controller. Therefore, I decided to have a gaze feature in the application. The gaze feature allows the users to select active items or buttons inside the \acrshort{vr} environment. 
+
+
+
+
+
+I used GoogleVR Unity asset
+
+
 
 
 
 
 \subsection{User Interface}
 
-“ In order to allow human-computer interaction it is necessary to use special interfaces designed to input a user's commands into the computer and to provide feedback from the simulation to the user” \citep{burdea2017virtual}.
+\say{In order to allow human-computer interaction it is necessary to use special interfaces designed to input a user's commands into the computer and to provide feedback from the simulation to the user} \citep{burdea2017virtual}.
