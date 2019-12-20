@@ -1,6 +1,6 @@
+The chapter will present the \acrlong{vr} system architecture, then I will talk about the hardware and software used during the development and prototyping process. I will show in detail the development process of Glimpses from Palestine application, from developing the \acrshort{vr} environment to re-building Al-Ghabisiyya in \acrlong{vr}. In the last section, I will talk about the design of the application \acrlong{ui}.
 
-
-\section{Virtual reality components}
+\section{Virtual Reality components}
 
 
 
@@ -92,8 +92,7 @@ assemble Cardboard themselves from readily available parts \citep{Prasuethsut201
 sides are not symmetrically aligned, they are off-axis. That helps to
 process the images or the footage taken from the two lenses to not
 have visible stitching or overlapping in the final image. That is a
-common problem in most of the VR cameras to have a big overlapping on the final image. The data is saved on two microSD cards one for each lens, the files need to be combined to have
-a final 360$^{\circ}$ video \citep{Easton2018}. The camera was used in most of the project filming material, it has the best footage quality and a perfect stabilization in the videos.
+common problem in most of the VR cameras to have a big overlapping on the final image. With a 4 microphones built-in the camera, it captures full circle audio for a spatial sound experience. The data is saved on two microSD cards one for each lens, the files need to be combined to have a final 360$^{\circ}$ video \citep{Easton2018}. The camera was used in most of the project filming material, it has the best footage quality and a perfect stabilization in the videos.
 
 
 \textbf{Samsung Gear 360}: The small and rounded shape of the camera is ideal for handheld shooting, although it has a socket also for a tripod. A small LCD screen helps in navigating through the camera modes. The video resolution is 4K, while the still images are somewhat soft. The smartphone app is easy to use and clear for the user also it offers a good range of viewing options. In general, is it a small and simple camera to use \citep{DigitalCamera2018}. The camera used as a backup camera during the project. The quality is acceptable for a small and very light camera.
@@ -113,7 +112,7 @@ a final 360$^{\circ}$ video \citep{Easton2018}. The camera was used in most of t
 
 \subsection{Glimpses from Palestine Application}
 
- Having looked closely into the prior design of the \acrshort{vr} application prototype that has been developed during \acrshort{yallah!} I realized that the previous design had many unorganized files. I decided to start the development from scratch again, This will make it more versatile, efficient and quick. Therefore I started to build the 360$^{\circ}$ video environment. In Unity when you start a new scene it has the camera in the middle of the environment by default, this camera will be the user's point of view. The camera will be surrounded by a sphere. The sphere will be the display of the 360$^{\circ}$ video. Since the camera will be in the middle of the sphere and the video will be played on the sphere from outside, the camera will show nothing when you play the scene. Therefore a small C\# code made it possible to flip the player of the video inside the sphere. Then the user will have the feeling of immersion in Virtual reality. 
+ Having looked closely into the prior design of the \acrshort{vr} application prototype that has been developed during \acrshort{yallah!} I realized that the previous design had many unorganized and missing files. I decided to start the development from scratch again, This will make it more versatile, efficient and quick. Therefore I started to build the 360$^{\circ}$ video environment. In Unity when you start a new scene it has the camera in the middle of the environment by default, this camera will be the user's point of view. The camera will be surrounded by a sphere. The sphere will be the display of the 360$^{\circ}$ video. Since the camera will be in the middle of the sphere and the video will be played on the sphere from outside, the camera will show nothing when you play the scene. Therefore a small C\# code made it possible to flip the player of the video inside the sphere. Then the user will have the feeling of immersion in virtual reality. 
 \begin{figure}[ht]
     \centering
     \includegraphics[width=0.90\textwidth]{images/sphere.png}
@@ -122,24 +121,78 @@ a final 360$^{\circ}$ video \citep{Easton2018}. The camera was used in most of t
 \end{figure}
 
 
-Next, I wanted to design a scene and code it absolutely where I could later use it as a template for other scenes. But before I rendered the 360 videos, it took a lot of computer power because it stitched and rendered two videos from the two lenses in the camera.I rendered the videos at night and worked on the application design during the day.
+Next, I wanted to design a scene and code it absolutely where I could later use it as a template for other scenes. Before that, I rendered the 360 videos, it took a lot of computer power because it stitched and rendered two videos from the two lenses in the camera. I rendered the videos at night and worked on the application design during the day.
 
-I took the first video to Unity, and it was jamming all the time as I tried it. The image was frozen, then I heard no sound.On a VR video player, I tried to play the video. This performed well, and with sound. I took a step backwards and tested the configuration I used for rendering. The video was made in the form of 5.2k and the spatial sound. Unity can not handle 5.2k video seamlessly and without a third-party plug-in, it can not process spatial audio. Once I made the rendering configuration changes, I researched the video settings in Unity in the unity community forum and found that the videos had to be trans-coded in Unity, so I trans-coded the videos with VP8 codec. The videos worked smoothly after that. 
+I took the first video to Unity, and it was jamming all the time as I tried it. The image was frozen, then I heard no sound. On a standalone VR video player, I tried to play the video. This performed well, and with sound. I took a step backwards and tested the configuration that I used for rendering. The video was made in a 5.2k quality with spatial sound of 8 audio channels. Unity can not handle 5.2k video seamlessly and without a third-party plug-in, it can not process spatial audio with 8 audio channels. Once I made the rendering configuration changes, I researched the video settings in Unity in the unity community forum and found that the videos had to be trans-coded in Unity, so I trans-coded the videos with VP8 codec. The videos worked smoothly after that. 
 
-Now I have a Virtual reality environment, I am inside a 360$^{\circ}$ video and I look around me as I am being there. To solve the spatial sound problem, I found an asset (plug-in) for Unity called \say{ResonanceAudio}. It will make the Audio of the video spatial, that means the audio will move where is the user looking at, some people call it \say{3D Sound}.   
+Now I have a Virtual Reality environment, I am inside a 360$^{\circ}$ video and I look around me as I am being there. The spatial sound problem, was solved automatically by Unity, the audio of the video was analyzed and it was given the spatial sound functionality, because of spatial sound recording feature in the GoPro Fusion. That means the audio will move where is the user looking at, some people call it \say{3D Sound}.   
 
-Users need to move around the scenes, therefore they need a selection tool or a controller. Due to the application purposes that it needs to be on a smartphone, it wouldn't be reliable to program the application for a certain kind of controller. Therefore, I decided to have a gaze feature in the application. The gaze feature allows the users to select active items or buttons inside the \acrshort{vr} environment. 
-
-
+Users need to move around different locations and cities, therefore they need a selection tool or a controller. Due to the findings in the first pre-study during \acrfull{yallah!} hackathon, the application needs to be on a smartphone for an easier accessibility and functionality for users. Therefore, it wouldn't be reliable to program the application for a certain kind of controller. Thus, I decided to have a gaze feature in the application. The gaze feature allows the users to select active items or buttons inside the \acrshort{vr} environment only by looking at the button or active item. 
 
 
+I used the GoogleVR Unity asset to incorporate the environmental gaze functionality. The gaze feature adds a small blue circle in the middle of the vision of users. While the user looks at a button or an active object, an animated white stripe timeline will appear around the circle. It is an interactive sequence of 3 seconds. Once it is done, like a mouse-click on the button or the active item will be triggered. 
 
-I used GoogleVR Unity asset
+I used a default button from Unity for testing the gaze feature. Therefore I created another scene that contains the same components but with a different video. I added a C\# code to the button to give it the functionality of transferring the user between the scenes. 
+
+I was searching for Palestinian villages maps to reconstruct them, but sadly I couldn't find anything on the internet. I've searched blogs, forums, Facebook groups, but no results have been found. Therefore I made contact with a Palestinian expert in the demolished and depopulated villages. Upon describing the application concept to him, he remembered that there is a man used to live in Al-Ghabisiyya village has a map for the village before 1948. I made a contact with the man via WhatsApp, he was very open and showed interest in the project. 
+He told me the map was originally based on an Al-Ghabisiyya Ariel photo taken in 1946 by the British mandate. By the end of the day, he sent me a picture for the map via WhatsApp, as shown in Figure \ref{fig:ghmap} the map had numbers on the buildings. Then he sent me a list that contains the family names next to the house numbers that are shown on the map. 
+\begin{figure}[ht]
+    \centering
+    \includegraphics[width=0.50\textwidth, angle=270]{images/ALGHABS_MAP.jpeg}
+    \caption{Al-Ghabisiyya Map}
+    \label{fig:ghmap}
+\end{figure} 
+ 
+He told me during my conversation with the man that the only structure in Al-Ghabisiyya that still stands is the mosque. I scanned through the list to find the mosque number, and it was 38. That's going to be my reference point for the rest of the village for 3D modeling. Palestineremembered.com is a website for offering specific information on each village, it helped me locate Al-Ghabisiyya's place on Google Maps. On Google Maps, I found the mosque, although the whole place now looks like a forest. To align it with the village map, I took a screenshot of the satellite map of the village area.  
+
+The map had no keys for scale or orientation, I didn't know what is the north and what is the west. I thought to try to scale it and use the mosque as a reference, and send it back to the man, to ask him for confirmation. I used Adobe Photoshop to combine the photos to get a better understanding of how did the village look like as shown in Figure \ref{fig:wmap}.     
+
+\begin{figure}[ht]
+    \centering
+    \includegraphics[width=0.60\textwidth]{images/wr_ghb.jpeg}
+    \caption{The First try of Mapping Al-Ghabisiyya}
+    \label{fig:wmap}
+\end{figure} 
+
+Upon getting assurance from the man that the location of the map is right, I started preparing the village ground sketch on Adobe Illustrator as it can export SVG images. Then in Fusion 360, I can import the SVG template and extrude the model so that the buildings have the third dimension. While I was drawing the map on Adobe Illustrator, I discovered that the Mosque's yard was on the map, so I pointed out there was a major error in the mapping I sent to the man. 
+The mosque yard is in front of the entrance to the mosque to accommodate as many people during prayers as possible. The entry should be in the direction of Mecca, and the mapping in Figure \ref{fig:wmap} it is in the direction to the west. Therefore, I took a straight line from the mosque to Mecca in Google maps as shown in Figure \ref{fig:stline}, to validate my vision about the map.
 
 
+\begin{figure}[ht]
+    \centering
+    \includegraphics[width=1\textwidth]{images/stline.png}
+    \caption{Al-Ghabisiyya Mosque Direction to Mecca}
+    \label{fig:stline}
+\end{figure} 
+
+The mosque position is aligned exactly with the straight line that I drew. This was a validation of the map orientation and scale. I continued to scale down the map and rotate it in the correct position afterward. when I came to the correct orientation and size of the map, It fit perfectly with the geography of the area as shown in Figure \ref{fig:scale} after all those years.
 
 
+\begin{figure}[ht]
+    \centering
+    \includegraphics[width=0.70\textwidth]{images/scale.png}
+    \caption{Al-Ghabisiyya Mapping Correction}
+    \label{fig:scale}
+\end{figure} 
+ 
+I started with the village's 3D modeling after refining the map orientation, mapping every house as close as possible to the map I received. Having a high-quality map when working on a significant detail would be better. Unfortunately, it was a picture of low quality, but I tried to get as close as possible to most of the buildings as they appeared. Nevertheless, I couldn't get any more details about the specifications of the buildings, such as doors or windows. I need not only model the village in 3D form, but I need to determine the landscape and the location of the village accurately as well. I used 3D-map-generator.com for getting a depth map for the area as a PNG image. In Unity I used the terrain asset and provide it with the depth map image, for generating the 3D model of the terrain for the area around Al-Ghabisiyya village check Figure \ref{fig:terr}.
 
+\begin{figure}[ht]
+    \centering
+    \includegraphics[width=0.70\textwidth]{images/terr.png}
+    \caption{Terrain}
+    \label{fig:terr}
+\end{figure} 
+
+
+Now I have the terrain of the whole surrounding and I have the village modeled. Placing the village on the terrain with the right scaling needs to be precise. There is no easy way to do that except using the previous way that I did it with the map and the satellite image, by applying the layers over each other in Photoshop. I took an upper screenshot of the terrain and I added it to Photoshop as a third layer on the previous work. I combined between a satellite image, a three dimensional computer generated terrain, and a map for Al-Ghabisiyya. I placed Al-Ghabisiyya model on the right location. I had to take screenshot of the terrain every time I move Al-Ghabisiyya model on the Terrain and compare the location on Photoshop I repeated the process multiple times until I achieved the correct result. The only building that I modeled it with details was the mosque, since it is the only thing that remained in Al-Ghabisiyya, then it was clear for me, the rest of the buildings were modeled as blocks. However I added an old stone texture to the buildings as how I saw the photos of Al-Ghabisiyya mosque photos. 
+
+\begin{figure}[ht]
+    \centering
+    \includegraphics[width=1\textwidth]{images/Ghab_mos.png}
+    \caption{3D model of Al-Ghabisiyya and the Mosque}
+    \label{fig:3d}
+\end{figure} 
 
 \subsection{User Interface}
 
